@@ -1,10 +1,10 @@
 # Event Planner (working name)
 
-![Build status](https://travis-ci.org/ChaoticLaw/event-planner.svg?branch=master)
+![Build status](https://travis-ci.org/hipdesignchat/event-planner.svg?branch=master)
 
 Event Planner aims to give event organisers and people an easy platform to organise and run events.
 
-It runs on Laravel.
+This application is powered by PHP and [Laravel](https://laravel.com/).
 
 ## Setup and Running
 You'll need access to the PHP binary and Composer to install everything to get going. You should set them up in your PATH if you haven't already, as it'll make development far easier.
@@ -18,6 +18,6 @@ Note that you'll need a file called `.env` in the root folder of the repository,
 You can run the application by running `php artisan serve` and going to `http://localhost:8000`.
 
 ## Running tests
-Testing is provided with [PHPUnit](https://phpunit.de/). It should be installed after using `composer install` earlier.
+Testing is provided with [PHPUnit](https://phpunit.de/). It should be included after running `composer install`.
 
 To run tests, execute `./vendor/bin/phpunit -c phpunit.xml`.
