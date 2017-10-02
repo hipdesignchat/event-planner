@@ -1,6 +1,6 @@
 # Event Planner (working name)
 
-![Build status](https://travis-ci.org/hipdesignchat/event-planner.svg?branch=master)
+[![Build status](https://travis-ci.org/hipdesignchat/event-planner.svg?branch=master)](https://travis-ci.org/hipdesignchat/event-planner)
 
 Event Planner aims to give event organisers and people an easy platform to organise and run events.
 
