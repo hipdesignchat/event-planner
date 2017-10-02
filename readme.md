@@ -1,4 +1,7 @@
 # Event Planner (working name)
+
+![Build status](https://travis-ci.org/ChaoticLaw/event-planner.svg?branch=master)
+
 Event Planner aims to give event organisers and people an easy platform to organise and run events.
 
 It runs on Laravel.
