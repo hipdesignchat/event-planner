@@ -20,7 +20,14 @@ class Event extends Model
         $this->attributes = $attributes;
     }
 
+    /**
+     * Returns items where the status code is published
+     *
+     * @return Query
+     */
     public function scopeCurrent($query) {
-      return $query->where('status_id', 1);
+        return $query->where('status_id', 1);
+    }
+
     }
 }
