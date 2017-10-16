@@ -36,7 +36,23 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title'         => 'required',
+            'description'   => 'required',
+            'location'      => 'required',
+        ]);
+
+        $event = Event::create([
+            'title'         => request('title'),
+            'description'   => request('description'),
+            'location'      => request('location'),
+            'owner_id'      => request('owner_id'),
+            'status_id'     => request('status_id'),
+            'event_begin'   => request('event_begin'),
+            'event_end'     => request('event_end')
+        ]);
+
+        return redirect()->route('event_view', [$event]);
     }
 
     /**
