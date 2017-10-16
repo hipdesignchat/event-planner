@@ -15,4 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('event', 'EventController@index');
+Route::get('/event', 'EventController@index');
+Route::get('/event/view/{event}', ['as' => 'event_view', 'uses' => 'EventController@show']);
+Route::get('/event/new', 'EventController@create');
+Route::post('/event', 'EventController@store');
