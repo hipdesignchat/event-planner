@@ -10,6 +10,16 @@ class Event extends Model
 
     protected $fillable = ['title','description','location','owner_id','status_id','event_begin','event_end'];
 
+    /**
+     * Constructor
+     *
+     * @param array $attributes
+     */
+    public function __construct($attributes = [])
+    {
+        $this->attributes = $attributes;
+    }
+
     public function scopeCurrent($query) {
       return $query->where('status_id', 1);
     }
