@@ -15,6 +15,8 @@ You'll need access to the PHP binary and Composer to install everything to get g
 
 Note that you'll need a file called `.env` in the root folder of the repository, which isn't included by default. You can set it up by copying `.env.example`, then running `php artisan key:generate` to set up proper encryption for security functions.
 
+To get database operations going, you'll need to configure the database configuration in `.env`, and then execute `php artisan migrate`. This will automatically create the table structure for the application to access.
+
 You can run the application by running `php artisan serve` and going to `http://localhost:8000`.
 
 ## Running tests
