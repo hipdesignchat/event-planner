@@ -11,6 +11,16 @@ class Event extends Model
     protected $fillable = ['title','description','location','owner_id','status_id','event_begin','event_end'];
 
     /**
+     * Attributes that should be mutated to dates. 
+     * 
+     * @var array
+     */
+    protected $dates = [
+        'event_begin',
+        'event_end'
+    ];
+
+    /**
      * Constructor
      *
      * @param array $attributes
