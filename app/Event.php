@@ -20,6 +20,7 @@ class Event extends Model
         'event_end'
     ];
 
+    protected $dateFormat = 'Y-m-d\TH:i:s';
     /**
      * Constructor
      *

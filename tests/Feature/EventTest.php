@@ -32,15 +32,20 @@ class EventTest extends TestCase
             'location'    => 'Darling Harbour',
             'owner_id'    => 1,
             'status_id'   => 1,
-            'event_begin' => 'NOW()',
-            'event_end'   => 'NOW()'
+            'event_begin' => '2018-10-31T10:00:00',
+            'event_end'   => '2018-11-01T10:00:00'
         ];
 
         // MN: Test to submit data
         $result = $this->post("event", $data);
+        //dd($data);
         // MN: This checks that we've been redirected
         $result->assertStatus(302);
-        //$result->assertJsonStructure(array_keys($data), $data);
-        // MN: Test if the data is received by checking the view
+
+        /**
+         * MN: Test if the data is received
+         * by checking the database
+         */ 
+        $this->assertDatabaseHas('events', $data);
     }
 }
