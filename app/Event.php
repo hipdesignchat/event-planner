@@ -10,6 +10,11 @@ class Event extends Model
 
     protected $fillable = ['title','description','location','owner_id','status_id','event_begin','event_end'];
 
+    // MN: This function basically will return the user associated with an event
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+
     /**
      * Attributes that should be mutated to dates. 
      * 
