@@ -1,7 +1,7 @@
 <nav class="navbar">
   <p>Logo</p>
   <ul>
-    <li><a href="/event/create">Create an Event</a></li>
+    <li><a href="/event/new">Create an Event</a></li>
 
     @if (Auth::check())
       <li><a href="#">{{ Auth::user()->name }}</a></li>
