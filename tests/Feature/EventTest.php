@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Event;
+use App\User;
 
 class EventTest extends TestCase
 {
@@ -25,6 +26,9 @@ class EventTest extends TestCase
      */
     public function test_can_make_an_event()
     {
+        // as a user
+        $user = factory(User::class)->create();
+        $this->be($user);
 
         $data = [
             'title'       => 'New Event',
