@@ -1,0 +1,11 @@
+// Navbar CSS
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  li {
+    display: inline-block;
+  }
+}
