@@ -19,7 +19,8 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::Current()->get();
-        return view('event.index', compact('events'));
+        $title = "Event Index";
+        return view('event.index', compact(['events', 'title']));
     }
 
     /**
@@ -29,7 +30,8 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('event.create');
+        $title = 'Create an Event';
+        return view('event.create', compact(['title']));
     }
 
     /**
@@ -67,7 +69,8 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        return view('event.show', compact('event'));
+        $title = $event->title;
+        return view('event.show', compact(['event', 'title']));
     }
 
     /**
