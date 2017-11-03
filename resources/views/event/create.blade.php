@@ -12,9 +12,6 @@
       <label for="location">Location</label><input type="text" name="location" id="location">
     </p>
     <p>
-      <label for="owner_id">Owner ID</label><input type="number" name="owner_id" id="owner_id">
-    </p>
-    <p>
       <label for="status_id">Status ID</label><input type="number" name="status_id" id="status_id">
     </p>
     <p>
