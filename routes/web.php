@@ -12,8 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('pages.landing');
-});
+    $title = 'Event Planner';
+    return view('pages.landing', compact(['title']));
+})->name('home');
 
 Route::get('/event', 'EventController@index');
 Route::get('/event/view/{event}', ['as' => 'event_view', 'uses' => 'EventController@show']);
