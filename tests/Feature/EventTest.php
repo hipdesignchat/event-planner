@@ -27,6 +27,12 @@ class EventTest extends TestCase
     public function test_can_make_an_event()
     {
         // Given there are two events
+        $event_first = factory(Event::class)->create();
+        $event_second = factory(Event::class)->create([
+            'event_begin' => \Carbon\Carbon::now()->addMonth(),
+            'event_end' => \Carbon\Carbon::now()->addMonth()->addDay()
+        ]);
+
         // as a user
         $user = factory(User::class)->create();
         $this->be($user);
@@ -35,22 +41,13 @@ class EventTest extends TestCase
             'title'       => 'New Event',
             'description' => 'This event is rad!',
             'location'    => 'Darling Harbour',
-            'owner_id'    => 1,
             'status_id'   => 1,
-            'event_begin' => '2018-10-31T10:00:00',
-            'event_end'   => '2018-11-01T10:00:00'
+            'event_begin' => '2018-10-31 10:00:00',
+            'event_end'   => '2018-11-01 10:00:00'
         ];
 
         // When I submit a new event
         $result = $this->post("event", $data);
-        //dd($data);
-        // MN: This checks that we've been redirected
-        $result->assertStatus(302);
-
-        /**
-         * MN: Test if the data is received
-         * by checking the database
-         */ 
 
         // Then the response should be in the proper format
         $this->assertDatabaseHas('events', $data);
