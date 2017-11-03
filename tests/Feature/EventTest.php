@@ -26,6 +26,7 @@ class EventTest extends TestCase
      */
     public function test_can_make_an_event()
     {
+        // Given there are two events
         // as a user
         $user = factory(User::class)->create();
         $this->be($user);
@@ -40,7 +41,7 @@ class EventTest extends TestCase
             'event_end'   => '2018-11-01T10:00:00'
         ];
 
-        // MN: Test to submit data
+        // When I submit a new event
         $result = $this->post("event", $data);
         //dd($data);
         // MN: This checks that we've been redirected
@@ -50,6 +51,8 @@ class EventTest extends TestCase
          * MN: Test if the data is received
          * by checking the database
          */ 
+
+        // Then the response should be in the proper format
         $this->assertDatabaseHas('events', $data);
     }
 }
