@@ -48,15 +48,16 @@ class EventController extends Controller
             'location'      => 'required',
         ]);
 
-        $event = Event::create([
-            'title'         => request('title'),
-            'description'   => request('description'),
-            'location'      => request('location'),
-            'owner_id'      => request('owner_id'),
-            'status_id'     => request('status_id'),
-            'event_begin'   => request('event_begin'),
-            'event_end'     => request('event_end')
-        ]);
+        auth()->user()->publish(
+            $event = new Event(request([
+                'title',
+                'description',
+                'location',
+                'status_id',
+                'event_begin',
+                'event_end'
+            ]))
+        );
 
         return redirect()->route('event_view', [$event]);
     }
