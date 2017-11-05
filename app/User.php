@@ -26,4 +26,27 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Associate a User with many Events
+     */
+    public function events() {
+        return $this->hasMany(Event::class);
+    }
+
+    /**
+     *  Publish an Event
+     */
+    public function publish(Event $event) {
+        $this->events()->save($event);
+        // $event = Event::create([
+        //     'title'         => request('title'),
+        //     'description'   => request('description'),
+        //     'location'      => request('location'),
+        //     'user_id'       => auth()->id,
+        //     'status_id'     => request('status_id'),
+        //     'event_begin'   => request('event_begin'),
+        //     'event_end'     => request('event_end')
+        // ]);
+    }
 }
