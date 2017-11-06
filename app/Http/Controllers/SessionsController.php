@@ -12,6 +12,19 @@ class SessionsController extends Controller
     return view('sessions.create', compact(['title']));
 	}
 
+  public function store() {
+    // MN: Attempt to authenticate
+    if (!auth()->attempt(request(['email', 'password']))) {
+      // MN If unsuccessful, redirect back with errors
+      return back()->withErrors([
+        'message' => 'Please check your credentials and try again.'
+      ]);
+    }
+
+    // Redirect to the home page
+    return redirect()->home();
+  }
+
 	public function destroy() {
 		auth()->logout();
 
