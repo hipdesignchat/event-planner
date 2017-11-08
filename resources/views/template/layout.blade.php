@@ -11,15 +11,16 @@
 </head>
 <body>
   @include ('template.nav')
-  
-  @if (count($errors))
-    @foreach ($errors->all() as $error)
-      <p>{{ $error }}</p>
-    @endforeach
-  @endif
+  <main class="container">
+    @if (count($errors))
+      @foreach ($errors->all() as $error)
+        <p>{{ $error }}</p>
+      @endforeach
+    @endif
 
-  @yield ('content')
+    @yield ('content')
 
+  </main>
   @include ('template.footer')
 </body>
 </html>
