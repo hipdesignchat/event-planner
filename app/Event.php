@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    protected $visible = ['title','description','location','status_id','event_begin','event_end'];
+    protected $visible = ['title','description','location','status_id','event_begin','event_end','colour'];
 
-    protected $fillable = ['title','description','location','owner_id','status_id','event_begin','event_end'];
+    protected $fillable = ['title','description','location','owner_id','status_id','event_begin','event_end','colour'];
 
     // MN: This function basically will return the user associated with an event
     public function user() {
@@ -58,6 +58,7 @@ class Event extends Model
         $event->status_id = $request['status_id'];
         $event->event_begin = $request['event_begin'];
         $event->event_end = $request['event_end'];
+        $event->colour = $request['colour'];
 
         $event->save();
 

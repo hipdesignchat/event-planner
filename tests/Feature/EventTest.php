@@ -42,6 +42,7 @@ class EventTest extends TestCase
             'description' => 'This event is rad!',
             'location'    => 'Darling Harbour',
             'status_id'   => 1,
+            'colour'      => '#000',
             'event_begin' => '2018-10-31 10:00:00',
             'event_end'   => '2018-11-01 10:00:00'
         ];
