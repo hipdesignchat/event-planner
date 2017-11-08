@@ -15,10 +15,10 @@
       <label for="status_id">Status ID</label><input type="number" name="status_id" id="status_id">
     </p>
     <p>
-      <label for="event_begin">Event Start</label><input type="datetime-local" name="event_begin" id="event_begin">
+      <label for="event_begin">Event Start</label><input class="flatpickr" type="datetime-local" name="event_begin" id="event_begin">
     </p>
     <p>
-      <label for="event_end">Event End</label><input type="datetime-local" name="event_end" id="event_end">
+      <label for="event_end">Event End</label><input class="flatpickr" type="datetime-local" name="event_end" id="event_end">
     </p>
     <p>
       <button type="submit">Enter</button>
