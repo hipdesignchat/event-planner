@@ -55,7 +55,8 @@ class EventController extends Controller
                 'location',
                 'status_id',
                 'event_begin',
-                'event_end'
+                'event_end',
+                'colour'
             ]))
         );
 

@@ -9,6 +9,10 @@
       <textarea name="description" id="description" cols="30" rows="10"></textarea>
     </p>
     <p>
+      <label for="colour">Event Colour</label>
+      <input type="color" id="colour" name="colour">
+    </p>
+    <p>
       <label for="location">Location</label><input type="text" name="location" id="location">
     </p>
     <p>
