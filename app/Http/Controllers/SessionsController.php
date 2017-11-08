@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class SessionsController extends Controller
 {
+  public function __construct() {
+    // MN: The guest middleware will stop authenticated users from logging in again after logging in
+    $this->middleware('guest', ['except' => 'destroy']);
+  }
 
 	public function create() {
     $title = 'Sign In';
