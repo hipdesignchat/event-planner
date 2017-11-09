@@ -98,6 +98,12 @@ selectNodeVersion () {
 # PHP Helpers
 # -----------
 
+##################################################################################################################################
+# Download Composer
+# ----------
+echo Downloading Composer
+curl -sS https://getcomposer.org/installer | php
+
 initializeDeploymentConfig() {
 	if [ ! -e "$COMPOSER_ARGS" ]; then
     COMPOSER_ARGS="--no-interaction --prefer-dist --optimize-autoloader --no-progress --no-dev --verbose"
@@ -132,7 +138,7 @@ echo "$DEPLOYMENT_TARGET"
 if [ -e "$DEPLOYMENT_TARGET/composer.json" ]; then
   echo "Found composer.json"
   pushd "$DEPLOYMENT_TARGET"
-  composer install $COMPOSER_ARGS
+  php $DEPLOYMENT_TARGET/composer.phar install $COMPOSER_ARGS
   exitWithMessageOnError "Composer install failed"
   popd
 fi
