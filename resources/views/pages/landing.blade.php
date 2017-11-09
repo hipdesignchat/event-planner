@@ -24,7 +24,7 @@
     <div class="row">
       <ul class="event-items" >
         <li class="four columns item">
-          <a href="#"><img src="images/portfolio/event_1.jpg" alt="Yu-Gi-Oh">
+          <a href="#"><img src="/images/event_1.jpg" alt="Yu-Gi-Oh">
           <div class="event-detail">
             <div class="vertical-centered">
               <h3>Yu-Gi-Oh</h3>
@@ -33,7 +33,7 @@
           </div></a>
         </li>
         <li class="four columns item">
-          <a href="#"><img src="images/portfolio/event_2.jpeg" alt="Iron Chef">
+          <a href="#"><img src="/images/event_2.jpeg" alt="Iron Chef">
           <div class="event-detail">
             <div class="vertical-centered">
               <h3>Iron Chef</h3>
@@ -42,7 +42,7 @@
           </div></a>
         </li>
         <li class="four columns item">
-          <a href="#"><img src="images/portfolio/event_3.jpg" alt="Career planning">
+          <a href="#"><img src="/images/event_3.jpg" alt="Career planning">
           <div class="event-detail">
             <div class="vertical-centered">
               <h3>Career Seminar</h3>
@@ -51,7 +51,7 @@
           </div></a>
         </li>
         <li class="four columns item">
-          <a href="#"><img src="images/portfolio/event_4.jpg" alt="Intial D">
+          <a href="#"><img src="/images/event_4.jpg" alt="Intial D">
           <div class="event-detail">
             <div class="vertical-centered">
               <h3>Street racing</h3>
@@ -61,7 +61,7 @@
         </li>
 
         <li class="four columns item">
-          <a href="5.html"><img src="images/portfolio/event_5.jpeg" alt="Bitcoin">
+          <a href="5.html"><img src="/images/event_5.jpeg" alt="Bitcoin">
           <div class="event-detail">
             <div class="vertical-centered">
               <h3>Bitcoin seminar</h3>
@@ -70,7 +70,7 @@
           </div></a>
         </li>
         <li class="four columns item">
-          <a href="#"><img src="images/portfolio/event_6.jpg" alt="Hiking">
+          <a href="#"><img src="/images/event_6.jpg" alt="Hiking">
           <div class="event-detail">
             <div class="vertical-centered">
               <h3>Hiking</h3>
