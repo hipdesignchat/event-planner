@@ -1,51 +1,5 @@
 @extends ('template/layout')
 @section ('content')
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-
-  
-  <meta charset="utf-8">
-  <title>Event Planner</title>
-  <meta name="description" content="Do a thing!">
-  <meta name="author" content="HipDesign">
-
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/font-awesome.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Javascript
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script type="text/javascript" src="js/jquery.2.1.3.min.js"></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
-</head>
-
-
-<body>
-
-<!-- Menu -->
-
-
-  
-    
-<header>
-<nav class="navigation" style="width: 100%">
-  <ul class="main-navigation" style="margin-bottom: 0!important; background-color: black;">
-    <li><img src="images/event.png"></img></li>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#categories">Categories</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#help">Help</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#signup">Sign Up</a></li>
-    <li><a href="#signin">Sign In</a></li>
-  </ul>
-</nav>
-</header>
 <!-- Hero -->
 
 <section id="hero" class="hero">
@@ -162,21 +116,4 @@
     </div>
   </div>
 </section>
-
-<!-- Footer -->
-
-<section data-sr class="footer u-full-width">
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns">
-        <h5>&copy 2017 Hip Design</h5>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
-</html>
 @endsection
