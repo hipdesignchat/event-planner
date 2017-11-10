@@ -22,6 +22,7 @@ Route::get('/event', 'EventController@index');
 Route::get('/event/view/{event}', 'EventController@show')->name('event_view');
 Route::get('/event/new', 'EventController@create');
 Route::post('/event', 'EventController@store');
+Route::post('/event/search', 'EventController@search');
 
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
