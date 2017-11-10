@@ -3,25 +3,25 @@
   <div class="container">
   	<div class="row">
   		<div class="three columns">
-  			<a href="#"><h5> Create an Event </h5></a>
+  			<a href="/create"><h5> Create an Event </h5></a>
   		</div>
   		<div class="offset-by-six three columns ">
-  			<a href="#"><h5> Log In </h5></a>
+  			<a href="/login"><h5> Log In </h5></a>
   		</div>	
   	</div>
     <div class="row">
       <div class="three columns">
       	<ul>
-      	<a href="#"><li> Help </li></a>
-      	<a href="#"><li> Guidelines </li></a>
-      	<a href="#"><li> Events by City </li></a>
-      	<a href="#"><li> About Us </li></a>
+      	<a href="/help"><li> Help </li></a>
+      	<a href="/guidelines"><li> Guidelines </li></a>
+      	<a href="/events"><li> Events by City </li></a>
+      	<a href="/about"><li> About Us </li></a>
       </ul>
   	  </div>
       <div class="three columns">
       	<ul>
-      	<a href="#"><li> Terms and Conditions </li></a>
-      	<a href="#"><li> Privacy Policy </li></a>
+      	<a href="/terms"><li> Terms and Conditions </li></a>
+      	<a href="/privacy"><li> Privacy Policy </li></a>
       	</ul>
 		</div>
 
