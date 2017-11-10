@@ -2,25 +2,25 @@
   <div class="container">
   	<div class="row">
   		<div class="three columns">
-  			<h5> Create an Event </h5>
+  			<a href="#"><h5> Create an Event </h5></a>
   		</div>
   		<div class="offset-by-six three columns ">
-  			<h5> Log In </h5>
+  			<a href="#"><h5> Log In </h5></a>
   		</div>	
   	</div>
     <div class="row">
       <div class="three columns">
       	<ul>
-      	<li> Help </li>
-      	<li> Guidelines </li>
-      	<li> Events by City </li>
-      	<li> About Us </li>
+      	<a href="#"><li> Help </li></a>
+      	<a href="#"><li> Guidelines </li></a>
+      	<a href="#"><li> Events by City </li></a>
+      	<a href="#"><li> About Us </li></a>
       </ul>
   	  </div>
       <div class="three columns">
       	<ul>
-      	<li> Terms and Conditions </li>
-      	<li> Privacy Policy </li>
+      	<a href="#"><li> Terms and Conditions </li></a>
+      	<a href="#"><li> Privacy Policy </li></a>
       	</ul>
 		</div>
 
