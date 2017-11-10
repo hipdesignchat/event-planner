@@ -10,10 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Event;
 
 Route::get('/', function () {
     $title = 'Event Planner';
-    return view('pages.landing', compact(['title']));
+    $events = Event::take(6)->orderBy('event_begin', 'desc')->get();
+    return view('pages.landing', compact(['title', 'events']));
 })->name('home');
 
 Route::get('/event', 'EventController@index');

@@ -20,67 +20,24 @@
         <h3 class="separator">Current events</h3>
       </div>
     </div>
-   
-    <div class="row">
-      <ul class="event-items" >
-        <li class="four columns item">
-          <a href="#"><img src="/images/event_1.jpg" alt="Yu-Gi-Oh">
-          <div class="event-detail">
-            <div class="vertical-centered">
-              <h3>Yu-Gi-Oh</h3>
-              <p class="separator pink">Deep philosophical discussion</p>
-            </div>
-          </div></a>
-        </li>
-        <li class="four columns item">
-          <a href="#"><img src="/images/event_2.jpeg" alt="Iron Chef">
-          <div class="event-detail">
-            <div class="vertical-centered">
-              <h3>Iron Chef</h3>
-              <p class="separator pink">Kitchen Stadium awaits!</p>
-            </div>
-          </div></a>
-        </li>
-        <li class="four columns item">
-          <a href="#"><img src="/images/event_3.jpg" alt="Career planning">
-          <div class="event-detail">
-            <div class="vertical-centered">
-              <h3>Career Seminar</h3>
-              <p class="separator pink">For when programming is too hard</p>
-            </div>
-          </div></a>
-        </li>
-        <li class="four columns item">
-          <a href="#"><img src="/images/event_4.jpg" alt="Intial D">
-          <div class="event-detail">
-            <div class="vertical-centered">
-              <h3>Street racing</h3>
-              <p class="separator pink">Don't call the cops</p>
-            </div>
-          </div></a>
-        </li>
 
-        <li class="four columns item">
-          <a href="5.html"><img src="/images/event_5.jpeg" alt="Bitcoin">
-          <div class="event-detail">
-            <div class="vertical-centered">
-              <h3>Bitcoin seminar</h3>
-              <p class="separator pink">Your last chance at financial freedom</p>
-            </div>
-          </div></a>
-        </li>
-        <li class="four columns item">
-          <a href="#"><img src="/images/event_6.jpg" alt="Hiking">
-          <div class="event-detail">
-            <div class="vertical-centered">
-              <h3>Hiking</h3>
-              <p class="separator pink">A conventional event</p>
-            </div>
-          </div></a>
-        </li>
+    <div class="row">
+      @if (!empty($events))
+      <ul class="event-items" >
+        @foreach ($events as $event)
+          <li class="four columns item" style="background: {{ $event->colour }}">
+            <a href="/event/view/{{ $event->id }}">
+            <div class="event-detail">
+              <div class="vertical-centered">
+                <h3>{{ $event->title }}</h3>
+                <p class="separator pink">{{ str_limit($event->description, 32, '…') }}</p>
+              </div>
+            </div></a>
+          </li>
+        @endforeach
       </ul>
+      @endif
     </div>
-  </div>
 </section>
 <section data-sr id="contact" class="contact u-full-width" style="border: 1px solid black">
   <div class="container">
