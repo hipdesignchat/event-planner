@@ -3,7 +3,7 @@
   <div class="container">
   	<div class="row">
   		<div class="three columns">
-  			<a href="/create"><h5> Create an Event </h5></a>
+  			<a href="/event/new"><h5> Create an Event </h5></a>
   		</div>
   		<div class="offset-by-six three columns ">
   			<a href="/login"><h5> Log In </h5></a>
