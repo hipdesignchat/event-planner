@@ -20,9 +20,23 @@ class RegistrationController extends Controller
 			'password'	=>	'required|confirmed'
 		]);
 
+		// MN: Set user as administrator if they are the first
+		if (User::get()->count() < 1) {
+			$user_role = 'admin';
+		} else {
+			$user_role = 'user';
+		}
+
 		// MN: Create and save user
+
+		$registration_data = [
+			'name' => request('name'),
+			'email' => request('email'),
+			'password' => request('password'),
+			'user_role' => $user_role
+		];
 		$user = User::create(
-			request(['name', 'email', 'password'])
+			$registration_data
 		);
 
 		// MN: Sign the user in
