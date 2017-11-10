@@ -7,8 +7,15 @@
   <div class="hero-image"></div>
   <div class="container centered">
     <div class="twelve columns">
+      @if (Auth::check())
+      <form action="/event/search" method="post">
+        {{ csrf_field() }}
+        <input type="text" name="query", id="query"><button class="button-primary" type="submit">Search</button>
+      </form>
+      @else
       <h1 class="separator">Do a thing!</h1>
       <h2>Plan your next hike, party, or Sailor Moon convention with us!</h2>
+      @endif
     </div>
   </div>
 </section>

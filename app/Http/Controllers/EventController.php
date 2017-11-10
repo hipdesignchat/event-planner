@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class EventController extends Controller
 {
     public function __construct() {
-        $this->middleware('auth')->except(['index', 'show']);
+        $this->middleware('auth')->except(['index', 'show', 'search']);
     }
 
     /**
@@ -107,5 +107,18 @@ class EventController extends Controller
     public function destroy(Event $event)
     {
         //
+    }
+
+    /**
+     * Search for an event
+     *
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request) {
+        $results = Event::where('title', 'like', '%'.request('query').'%')->get();
+        $title = 'Searching for ‘'.request('query').'’';
+
+        return view('event.search', compact(['results', 'title']));
     }
 }
