@@ -25,12 +25,12 @@
       @if (!empty($events))
       <ul class="event-items" >
         @foreach ($events as $event)
-          <li class="four columns item">
-            <a href="/event/view/{{ $event->id }}"><img src="/images/event_1.jpg" alt="Yu-Gi-Oh">
+          <li class="four columns item" style="background: {{ $event->colour }}">
+            <a href="/event/view/{{ $event->id }}">
             <div class="event-detail">
               <div class="vertical-centered">
-                <h3>Yu-Gi-Oh</h3>
-                <p class="separator pink">Deep philosophical discussion</p>
+                <h3>{{ $event->title }}</h3>
+                <p class="separator pink">{{ str_limit($event->description, 32, '…') }}</p>
               </div>
             </div></a>
           </li>
