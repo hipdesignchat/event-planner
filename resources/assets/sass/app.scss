@@ -20,7 +20,9 @@
 // Bootstrap
 // @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
-
+main {
+  min-height: 100vh;
+}
 
 textarea {
   min-height: 200px;
