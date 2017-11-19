@@ -8,11 +8,16 @@ class Event extends Model
 {
     protected $visible = ['title','description','location','status_id','event_begin','event_end','colour'];
 
-    protected $fillable = ['title','description','location','owner_id','status_id','event_begin','event_end','colour'];
+    protected $fillable = ['title','description','location','owner_id','status_id','event_begin','event_end','colour', 'category_id'];
 
     // MN: This function basically will return the user associated with an event
     public function user() {
         return $this->belongsTo(User::class);
+    }
+
+    // MN: This links the category to the event
+    public function category() {
+        return $this->belongsTo(Category::class);
     }
 
     /**
