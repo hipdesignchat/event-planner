@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('pages.landing', compact(['title', 'events']));
 })->name('home');
 
+Route::get('/categories', 'CategoryController@index')->name('all_categories');
+Route::get('/category/view/{category}', 'CategoryController@show')->name('category_view');
+Route::get('/category/new', 'CategoryController@create');
+Route::post('/category', 'CategoryController@store');
+
 Route::get('/event', 'EventController@index');
 Route::get('/event/view/{event}', 'EventController@show')->name('event_view');
 Route::get('/event/new', 'EventController@create');
