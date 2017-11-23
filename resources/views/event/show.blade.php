@@ -7,7 +7,7 @@
   <p>{{ $event->event_begin->format('F j Y\, g:i A') }}–{{ $event->event_end->format('F j Y\, g:i A') }}</p>
 @endsection
 @section ('column_one')
-{{ $event->description }}
+{!!html_entity_decode($event->description)!!}
 @endsection
 @section ('column_two')
 <div class="register_interest">
