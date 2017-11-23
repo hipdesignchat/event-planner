@@ -8,20 +8,23 @@ use App\Event;
 class PagesController extends Controller
 {
     public function index() {
-      $title = 'Event Planner';
+      $title = 'Home';
       $events = Event::take(6)->orderBy('event_begin', 'desc')->get();
       return view('pages.landing', compact(['title', 'events']));
     }
 
     public function about() {
-      $title = '';
+      $title = 'About';
+      return view('pages.about', compact(['title']));
     }
 
     public function terms() {
-      $title = '';
+      $title = 'Terms of Service';
+      return view('pages.termsofuse', compact(['title']));
     }
 
     public function privacy() {
-      $title = '';
+      $title = 'Privacy Policy';
+      return view('pages.privacypolicy', compact(['title']));
     }
 }
