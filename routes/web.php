@@ -31,3 +31,8 @@ Route::post('/register', 'RegistrationController@store');
 Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy')->name('logout');
+
+// Routes for pages
+Route::get('/about', 'PagesController@about')->name('about');
+Route::get('/privacy', 'PagesController@privacy')->name('privacy');
+Route::get('/terms', 'PagesController@terms')->name('terms');
