@@ -21,8 +21,8 @@ class Event extends Model
     }
 
     /**
-     * Attributes that should be mutated to dates. 
-     * 
+     * Attributes that should be mutated to dates.
+     *
      * @var array
      */
     protected $dates = [
