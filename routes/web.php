@@ -12,11 +12,7 @@
 */
 use App\Event;
 
-Route::get('/', function () {
-    $title = 'Event Planner';
-    $events = Event::take(6)->orderBy('event_begin', 'desc')->get();
-    return view('pages.landing', compact(['title', 'events']));
-})->name('home');
+Route::get('/', 'PagesController@index')->name('home');
 
 Route::get('/categories', 'CategoryController@index')->name('all_categories');
 Route::get('/category/view/{category}', 'CategoryController@show')->name('category_view');
