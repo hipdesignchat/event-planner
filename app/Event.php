@@ -64,6 +64,7 @@ class Event extends Model
         $event->event_begin = $request['event_begin'];
         $event->event_end = $request['event_end'];
         $event->colour = $request['colour'];
+        $event->category_id = $request['category_id'];
 
         $event->save();
 

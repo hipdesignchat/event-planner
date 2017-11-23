@@ -40,6 +40,7 @@ class EventTest extends TestCase
         $data = [
             'title'       => 'New Event',
             'description' => 'This event is rad!',
+            'category_id' => 1,
             'location'    => 'Darling Harbour',
             'status_id'   => 1,
             'colour'      => '#000',
