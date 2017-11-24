@@ -143,6 +143,10 @@ if [ -e "$DEPLOYMENT_TARGET/composer.json" ]; then
   popd
 fi
 
+# Workaround because .env isn't updating right
+echo "Copying .env"
+cp 'repository/.env' $DEPLOYMENT_TARGET/.env
+
 ## Node
 # Select node version
 selectNodeVersion
