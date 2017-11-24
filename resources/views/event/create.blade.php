@@ -20,6 +20,9 @@
       <label for="status_id">Status ID</label><input type="number" name="status_id" id="status_id">
     </p>
     <p>
+      <label for="category_id">Category ID</label><input type="number" name="category_id" id="category_id">
+    </p>
+    <p>
       <label for="event_begin">Event Start</label><input class="flatpickr" type="datetime-local" name="event_begin" id="event_begin">
     </p>
     <p>
