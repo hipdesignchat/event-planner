@@ -31,6 +31,7 @@ Route::post('/event/search', 'EventController@search');
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 
+Route::get('/user', 'UserController@menu')->name('user_menu');
 Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy')->name('logout');
