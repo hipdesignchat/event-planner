@@ -11,7 +11,7 @@
     </p>
     <p>
       <label for="colour">Event Colour</label>
-      <input type="color" id="colour" name="colour">
+      <input type="color" id="colour" name="colour" placeholder="e.g. #fff or orange">
     </p>
     <p>
       <label for="location">Location</label><input type="text" name="location" id="location">
