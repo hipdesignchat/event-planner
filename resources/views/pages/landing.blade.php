@@ -37,7 +37,7 @@
             <div class="event-detail">
               <div class="vertical-centered">
                 <h3>{{ $event->title }}</h3>
-                <p class="separator pink">{{ str_limit($event->description, 32, '…') }}</p>
+                <p class="separator pink">{{ str_limit(strip_tags($event->description), 32, '…') }}</p>
               </div>
             </div></a>
           </li>
