@@ -50,7 +50,7 @@ class EventController extends Controller
             'location'      => 'required',
             'colour'        => 'required',
             'status_id'     => 'required|numeric',
-            'category_id'   => 'required'
+            'category_id'   => 'required|numeric'
         ]);
 
         auth()->user()->publish(
