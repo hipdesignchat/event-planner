@@ -89,7 +89,9 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        $title = 'Editing '.$event->title;
+        // MN: Model binding means we can move on
+        return view('event.edit', compact(['event', 'title']));
     }
 
     /**
