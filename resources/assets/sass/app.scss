@@ -131,12 +131,16 @@ header img, header nav {
   color: white;
 }
 
-.hero {  
+.hero {
   padding: 0;
   text-align: center;
   position: relative;
   color: white;
   min-height: 80vh;
+
+  input {
+    color: #000;
+  }
 }
 
 .hero-image {
