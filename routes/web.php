@@ -22,6 +22,9 @@ Route::post('/category', 'CategoryController@store');
 Route::get('/event', 'EventController@index');
 Route::get('/event/view/{event}', 'EventController@show')->name('event_view');
 Route::get('/event/new', 'EventController@create');
+Route::get('/event/edit/{event}', 'EventController@edit')->name('event_edit');
+Route::put('/event/{event}', 'EventController@update');
+Route::delete('/event/{event}', 'EventController@destroy');
 Route::post('/event', 'EventController@store');
 Route::post('/event/search', 'EventController@search');
 
