@@ -10,7 +10,7 @@
       @if (Auth::check())
       <form action="/event/search" method="post">
         {{ csrf_field() }}
-        <input type="text" name="query", id="query"><button class="button-primary" type="submit">Search</button>
+        <input type="text" name="query" id="query"><button class="button-primary" type="submit">Search</button>
       </form>
       @else
       <h1 class="separator">Do a thing!</h1>
