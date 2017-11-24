@@ -16,9 +16,9 @@ class Event extends Model
     }
 
     // MN: This links the category to the event
-    public function category() {
-        return $this->belongsTo(Category::class);
-    }
+    //public function category() {
+    //    return $this->belongsTo(Category::class);
+    //}
 
     /**
      * Attributes that should be mutated to dates.
@@ -64,7 +64,6 @@ class Event extends Model
         $event->event_begin = $request['event_begin'];
         $event->event_end = $request['event_end'];
         $event->colour = $request['colour'];
-        $event->category_id = $request['category_id'];
 
         $event->save();
 
