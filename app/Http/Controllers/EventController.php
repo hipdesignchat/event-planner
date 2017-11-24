@@ -45,7 +45,12 @@ class EventController extends Controller
         $this->validate($request, [
             'title'         => 'required',
             'description'   => 'required',
+            'event_begin'   => 'required',
+            'event_end'     => 'required',
             'location'      => 'required',
+            'colour'        => 'required',
+            'status_id'     => 'required|numeric',
+            'category_id'   => 'required'
         ]);
 
         auth()->user()->publish(
