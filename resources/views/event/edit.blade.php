@@ -1,6 +1,6 @@
 @extends ('template/layout')
 @section ('content')
-  <form method="PUT" action="/event/{{$event->id}}">
+  <form method="POST" action="/event/{{$event->id}}">
     {{ csrf_field() }}
     <p>
       <label for="title">Title</label><input type="text" name="title" id="title" value="{{$event->title}}">
@@ -31,5 +31,6 @@
     <p>
       <button type="submit">Update</button>
     </p>
+    {{ method_field('PUT') }}
   </form>
 @endsection
