@@ -145,7 +145,6 @@ header img, header nav {
   background-position: 50% 50%;
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
-  
 }
 
 .hero-image:after {
@@ -270,7 +269,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', end
   .event-items li.item.columns {
     width: 100%;
   }
-  
+
   .contact-us-details {
     padding: 70px 25px;
     text-align: center;
@@ -304,12 +303,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', end
 
 /* Larger than Desktop HD */
 @media (max-width: 1180px) {
-  
+
   header img, header nav {
     display: block;
     margin: 0 auto;
     text-align:center;
-    
+
 }
 
   .main-navigation {
