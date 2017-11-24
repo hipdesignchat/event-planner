@@ -145,7 +145,7 @@ fi
 
 # Workaround because .env isn't updating right
 echo "Copying .env"
-cp 'repository/.env' $DEPLOYMENT_TARGET/.env
+cp .env $DEPLOYMENT_TARGET/.env
 
 ## Node
 # Select node version
