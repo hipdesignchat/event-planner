@@ -23,7 +23,7 @@ class CreateEventsTable extends Migration
             $table->dateTime('event_begin');
             $table->dateTime('event_end');
             $table->string('colour');
-            $table->integer('category_id');
+            $table->integer('category_id')->null();
             $table->timestamps();
         });
     }

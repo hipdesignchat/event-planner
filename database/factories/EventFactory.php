@@ -5,9 +5,9 @@ use Faker\Generator as Faker;
 $factory->define(App\Event::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
-        'category_id' => function() {
-          return factory(App\Category::class)->create()->id;
-        },
+        //'category_id' => function() {
+        //  return factory(App\Category::class)->create()->id;
+        //},
         'user_id' => function() {
           return factory(App\User::class)->create()->id;
         },
