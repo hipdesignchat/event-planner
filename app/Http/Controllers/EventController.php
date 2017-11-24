@@ -49,8 +49,7 @@ class EventController extends Controller
             'event_end'     => 'required',
             'location'      => 'required',
             'colour'        => 'required',
-            'status_id'     => 'required|numeric',
-            'category_id'   => 'required|numeric'
+            'status_id'     => 'required|numeric'
         ]);
 
         auth()->user()->publish(
@@ -61,8 +60,7 @@ class EventController extends Controller
                 'status_id',
                 'event_begin',
                 'event_end',
-                'colour',
-                'category_id'
+                'colour'
             ]))
         );
 
@@ -112,7 +110,6 @@ class EventController extends Controller
           'location'      => 'required',
           'colour'        => 'required',
           'status_id'     => 'required|numeric',
-          'category_id'   => 'required|numeric'
       ]);
 
       // MN: Store the data
@@ -123,7 +120,6 @@ class EventController extends Controller
       $event->location  =  $request['location'];
       $event->colour  =  $request['colour'];
       $event->status_id  =  $request['status_id'];
-      $event->category_id  =  $request['category_id'];
       $event->save();
 
       return redirect()->route('event_view', [$event]);
