@@ -45,7 +45,11 @@ class EventController extends Controller
         $this->validate($request, [
             'title'         => 'required',
             'description'   => 'required',
+            'event_begin'   => 'required',
+            'event_end'     => 'required',
             'location'      => 'required',
+            'colour'        => 'required',
+            'status_id'     => 'required|numeric'
         ]);
 
         auth()->user()->publish(
@@ -83,7 +87,9 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        $title = 'Editing '.$event->title;
+        // MN: Model binding means we can move on
+        return view('event.edit', compact(['event', 'title']));
     }
 
     /**
@@ -95,7 +101,28 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-        //
+      // Validate the data
+      $this->validate($request, [
+          'title'         => 'required',
+          'description'   => 'required',
+          'event_begin'   => 'required',
+          'event_end'     => 'required',
+          'location'      => 'required',
+          'colour'        => 'required',
+          'status_id'     => 'required|numeric',
+      ]);
+
+      // MN: Store the data
+      $event->title  =  $request['title'];
+      $event->description  =  $request['description'];
+      $event->event_begin  =  date("Y-m-d H:i:s", strtotime($request['event_begin']));
+      $event->event_end  =  date("Y-m-d H:i:s", strtotime($request['event_end']));
+      $event->location  =  $request['location'];
+      $event->colour  =  $request['colour'];
+      $event->status_id  =  $request['status_id'];
+      $event->save();
+
+      return redirect()->route('event_view', [$event]);
     }
 
     /**

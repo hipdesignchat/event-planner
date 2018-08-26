@@ -12,21 +12,31 @@
 */
 use App\Event;
 
-Route::get('/', function () {
-    $title = 'Event Planner';
-    $events = Event::take(6)->orderBy('event_begin', 'desc')->get();
-    return view('pages.landing', compact(['title', 'events']));
-})->name('home');
+Route::get('/', 'PagesController@index')->name('home');
+
+Route::get('/categories', 'CategoryController@index')->name('all_categories');
+Route::get('/category/view/{category}', 'CategoryController@show')->name('category_view');
+Route::get('/category/new', 'CategoryController@create');
+Route::post('/category', 'CategoryController@store');
 
 Route::get('/event', 'EventController@index');
 Route::get('/event/view/{event}', 'EventController@show')->name('event_view');
 Route::get('/event/new', 'EventController@create');
+Route::get('/event/edit/{event}', 'EventController@edit')->name('event_edit');
+Route::put('/event/{event}', 'EventController@update');
+Route::delete('/event/{event}', 'EventController@destroy');
 Route::post('/event', 'EventController@store');
 Route::post('/event/search', 'EventController@search');
 
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 
+Route::get('/user', 'UserController@menu')->name('user_menu');
 Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy')->name('logout');
+
+// Routes for pages
+Route::get('/about', 'PagesController@about')->name('about');
+Route::get('/privacy', 'PagesController@privacy')->name('privacy');
+Route::get('/terms', 'PagesController@terms')->name('terms');

@@ -11,13 +11,16 @@
     </p>
     <p>
       <label for="colour">Event Colour</label>
-      <input type="color" id="colour" name="colour">
+      <input type="color" id="colour" name="colour" placeholder="e.g. #fff or orange">
     </p>
     <p>
       <label for="location">Location</label><input type="text" name="location" id="location">
     </p>
     <p>
       <label for="status_id">Status ID</label><input type="number" name="status_id" id="status_id">
+    </p>
+    <p>
+      <label for="category_id">Category ID</label><input type="number" name="category_id" id="category_id">
     </p>
     <p>
       <label for="event_begin">Event Start</label><input class="flatpickr" type="datetime-local" name="event_begin" id="event_begin">

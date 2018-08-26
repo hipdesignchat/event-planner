@@ -10,7 +10,7 @@
       @if (Auth::check())
       <form action="/event/search" method="post">
         {{ csrf_field() }}
-        <input type="text" name="query", id="query"><button class="button-primary" type="submit">Search</button>
+        <input type="text" name="query" id="query"><button class="button-primary" type="submit">Search</button>
       </form>
       @else
       <h1 class="separator">Do a thing!</h1>
@@ -37,7 +37,7 @@
             <div class="event-detail">
               <div class="vertical-centered">
                 <h3>{{ $event->title }}</h3>
-                <p class="separator pink">{{ str_limit($event->description, 32, '…') }}</p>
+                <p class="separator pink">{{ str_limit(strip_tags($event->description), 32, '…') }}</p>
               </div>
             </div></a>
           </li>
@@ -61,7 +61,7 @@
 
 <section class="container contact-us u-full-width u-max-full-width">
   <div class="row">
-    
+
     <div class="twelve columns contact-us-form">
       <h3 class="separator">Contact</h3>
       <form>

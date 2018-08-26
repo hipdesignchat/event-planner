@@ -17,10 +17,18 @@
         <p>{{ $error }}</p>
       @endforeach
     @endif
-
-    @yield ('content')
-
+    <section style="background: @yield ('hero_background')">
+      @yield ('hero_content')
+    </section>
+    <div class="row">
+      <div class="eight columns">
+        @yield ('column_one')
+      </div>
+      <div class="four columns">
+        @yield ('column_two')
+      </div>
+    </div>
   </main>
-  @include ('template.footer')
+@include ('template.footer')
 </body>
 </html>

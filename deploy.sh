@@ -77,7 +77,7 @@ selectNodeVersion () {
       NODE_EXE=`cat "$DEPLOYMENT_TEMP/__nodeVersion.tmp"`
       exitWithMessageOnError "getting node version failed"
     fi
-    
+
     if [[ -e "$DEPLOYMENT_TEMP/__npmVersion.tmp" ]]; then
       NPM_JS_PATH=`cat "$DEPLOYMENT_TEMP/__npmVersion.tmp"`
       exitWithMessageOnError "getting npm version failed"
@@ -142,6 +142,10 @@ if [ -e "$DEPLOYMENT_TARGET/composer.json" ]; then
   exitWithMessageOnError "Composer install failed"
   popd
 fi
+
+# Workaround because .env isn't updating right
+echo "Copying .env"
+cp .env $DEPLOYMENT_TARGET/.env
 
 ## Node
 # Select node version
